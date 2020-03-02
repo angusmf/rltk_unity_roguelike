@@ -24,6 +24,9 @@ namespace RLTKTutorial.Part1_5A
         [SerializeField]
         int _viewRange = 8;
 
+        [SerializeField]
+        string _actionText = "shouts angrily at";
+
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             dstManager.AddComponent<Monster>(entity);
@@ -36,6 +39,7 @@ namespace RLTKTutorial.Part1_5A
             dstManager.AddComponentData<ViewRange>(entity, _viewRange);
             dstManager.AddComponentData<Speed>(entity, _speed);
             dstManager.AddComponentData<Name>(entity, name);
+            dstManager.AddComponentData<ActionText>(entity, _actionText);
             dstManager.AddComponentData<Actor>(entity, new Actor
             {
                 actorType = ActorType.Monster

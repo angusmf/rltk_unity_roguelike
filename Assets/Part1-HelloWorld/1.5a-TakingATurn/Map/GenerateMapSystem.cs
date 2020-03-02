@@ -45,6 +45,7 @@ namespace RLTKTutorial.Part1_5A
                 ComponentType.ReadWrite<Position>(),
                 ComponentType.ReadWrite<Renderable>(),
                 ComponentType.ReadWrite<Name>(),
+                ComponentType.ReadOnly<ActionText>(),
                 ComponentType.ReadOnly<TilesInView>(),
                 ComponentType.ReadOnly<ViewRange>(),
                 ComponentType.ReadOnly<Actor>(),

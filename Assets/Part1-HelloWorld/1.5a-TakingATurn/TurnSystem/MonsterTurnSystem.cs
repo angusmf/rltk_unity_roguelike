@@ -12,6 +12,7 @@ namespace RLTKTutorial.Part1_5A
 		public override ActorType ActorType => ActorType.Monster;
 
         EntityQuery _playerQuery;
+        EntityQuery _mapQuery;
 
         Random _rand;
 
@@ -32,6 +33,9 @@ namespace RLTKTutorial.Part1_5A
                 ComponentType.ReadOnly<Name>()
                 );
 
+            _mapQuery = GetEntityQuery(
+                ComponentType.ReadOnly<MapData>()
+                );
 
             _rand = new Random((uint)UnityEngine.Random.Range(1, int.MaxValue));
         }
@@ -58,6 +62,24 @@ namespace RLTKTutorial.Part1_5A
 
         protected override int OnTakeTurn(Entity e)
         {
+
+            var mapEntity = _mapQuery.GetSingletonEntity();
+            var mapData = EntityManager.GetComponentData<MapData>(mapEntity);
+
+            var view = EntityManager.GetBuffer<TilesInView>(e);
+            var playerEntity = _playerQuery.GetSingletonEntity();
+            var playerPos = (int2)EntityManager.GetComponentData<Position>(playerEntity);
+            var playerName = EntityManager.GetComponentData<Name>(playerEntity);
+            int playerIndex = playerPos.y * mapData.width + playerPos.x;
+
+            var name = EntityManager.GetComponentData<Name>(e);
+            var actionText = EntityManager.GetComponentData<ActionText>(e);
+
+            if (view[playerIndex])
+            {
+                Debug.Log($"{name} {actionText} {playerName}");
+            }
+
             var dir = GetRandomDirection(ref _rand);
 
             _moveSystem.TryMove(e, dir);
