@@ -73,11 +73,11 @@ namespace RLTKTutorial.Part1_5A
             int playerIndex = playerPos.y * mapData.width + playerPos.x;
 
             var name = EntityManager.GetComponentData<Name>(e);
-            var actionText = EntityManager.GetComponentData<ActionText>(e);
+            var welcomeText = EntityManager.GetComponentData<WelcomeText>(e);
 
             if (view[playerIndex])
             {
-                Debug.Log($"{name} {actionText} {playerName}");
+                Debug.Log($"{name} {welcomeText} {playerName}");
             }
 
             var dir = GetRandomDirection(ref _rand);

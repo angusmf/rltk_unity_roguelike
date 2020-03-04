@@ -612,6 +612,7 @@ MonoBehaviour:
   _color: {r: 0.24350302, g: 0.9056604, b: 0.2851376, a: 1}
   _speed: 40
   _viewRange: 8
+  _welcomeText: tips their kobold hat to
 --- !u!4 &828401111
 Transform:
   m_ObjectHideFlags: 0
@@ -673,6 +674,7 @@ MonoBehaviour:
   _color: {r: 0.9056604, g: 0.8925304, b: 0.2007832, a: 1}
   _speed: 1
   _viewRange: 8
+  _welcomeText: gazes stoically upon
 --- !u!4 &876740850
 Transform:
   m_ObjectHideFlags: 0
@@ -878,6 +880,7 @@ MonoBehaviour:
   _color: {r: 0.2599235, g: 0.47348684, b: 0.9339623, a: 1}
   _speed: 60
   _viewRange: 8
+  _welcomeText: barks a friendly hello to
 --- !u!4 &1215796956
 Transform:
   m_ObjectHideFlags: 0
@@ -939,6 +942,7 @@ MonoBehaviour:
   _color: {r: 0, g: 1, b: 0.9712162, a: 1}
   _speed: 25
   _viewRange: 8
+  _welcomeText: yodels happily at
 --- !u!4 &1223439102
 Transform:
   m_ObjectHideFlags: 0
@@ -1348,6 +1352,7 @@ MonoBehaviour:
   _color: {r: 0.7410197, g: 0, b: 1, a: 1}
   _speed: 25
   _viewRange: 8
+  _welcomeText: shoots a sultry glance at
 --- !u!4 &1731721950
 Transform:
   m_ObjectHideFlags: 0
@@ -1409,6 +1414,7 @@ MonoBehaviour:
   _color: {r: 0.90588236, g: 0.54696673, b: 0.24313721, a: 1}
   _speed: 40
   _viewRange: 8
+  _welcomeText: whimpers pitifully at
 --- !u!4 &1845285650
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,6 +1581,7 @@ MonoBehaviour:
   _color: {r: 0.44229057, g: 0.14195444, b: 0.5471698, a: 1}
   _speed: 25
   _viewRange: 8
+  _welcomeText: vamps in the general direction of
 --- !u!4 &1908036542
 Transform:
   m_ObjectHideFlags: 0
@@ -1886,6 +1893,7 @@ MonoBehaviour:
   _color: {r: 1, g: 0, b: 0, a: 1}
   _speed: 25
   _viewRange: 8
+  _welcomeText: screeches hello to
 --- !u!4 &2059195712
 Transform:
   m_ObjectHideFlags: 0
